@@ -1,0 +1,46 @@
+<h1>Cadastro de Clientes</h1>
+<div class="container">
+  <form [formGroup]="formGroup" (ngSubmit)= "cadastrar()">
+
+    <div class="form-group">
+      <label>Nome</label>
+      <input type="text" class="form-control" name="nome" formControlName="nome">
+      <small *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors" id="nomeHelp" class="form-text text-muted">Nome é inválido</small>
+    </div>
+
+    <div class="form-group">
+      <label>E-mail</label>
+      <input type="text" class="form-control" name="email" formControlName="email">
+      <small *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors" id="emailHelp" class="form-text text-muted">Email é inválido</small>
+    </div>
+
+    <div class="form-group">
+      <label>Telefone</label>
+      <input type="text" class="form-control" name="telefone" formControlName="telefone">
+      <small *ngIf="formGroup.controls.telefone.dirty && formGroup.controls.telefone.errors" id="telefoneHelp" class="form-text text-muted">Telefone é inválido</small>
+    </div>
+
+    <div class="form-group">
+      <label>Endereco</label>
+      <input type="text" class="form-control" name="endereco" formControlName="endereco">
+      <small *ngIf="formGroup.controls.endereco.dirty && formGroup.controls.endereco.errors" id="enderecoHelp" class="form-text text-muted">Endereço é inválido</small>
+    </div>
+
+    <div class="form-group">
+      <label>Data de Nascimento</label>
+      <input type="text" class="form-control" name="nascimento" formControlName="nascimento">
+      <small *ngIf="formGroup.controls.nascimento.dirty && formGroup.controls.nascimento.errors" id="nascimentoHelp" class="form-text text-muted">Nascimento é inválido</small>
+    </div>
+
+    <div class="form-group">
+      <label>Senha</label>
+      <input type="text" class="form-control" name="senha" formControlName="senha">
+      <small *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" id="senhaHelp" class="form-text text-muted">Senha é inválido</small>
+    </div>
+
+    <div class="form-group">
+     <button class="btn btn-primary" [disabled]="formGroup.invalid">Cadastrar</button>
+    </div>
+  </form>
+
+</div>
